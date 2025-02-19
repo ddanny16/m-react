@@ -31,3 +31,9 @@
       width: 100%;
     }
   }
+  @media(max-width:600px){
+    .search-container{
+      width: 50%;
+      margin: 0 auto;
+    }
+  }

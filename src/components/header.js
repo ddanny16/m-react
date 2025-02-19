@@ -4,7 +4,7 @@ import Logo from "../assets/Frame 427321331.svg";
 import Heart from "../assets/heart.svg";
 import Cart from "../assets/icon.svg";
 import SearchBar from "../components/searchbar";
-import HamburgerIcon from "../assets/ri_menu-4-line.svg"; 
+import HamburgerIcon from "../assets/ri_menu-4-line.svg";
 import CloseIcon from "../assets/close.png";
 
 const Header = () => {
@@ -15,12 +15,14 @@ const Header = () => {
       <header>
         <nav className="navbar">
           <span className="logo">
-            <img src={Logo} alt="Logo" />
+            <a href="http://localhost:3000/#">
+              <img src={Logo} alt="Logo" />
+            </a>
           </span>
 
           {/* Hamburger Menu Button */}
           <button
-            className="hamburger"
+            className={`hamburger ${isMobileMenuOpen ? "open" : ""}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <img

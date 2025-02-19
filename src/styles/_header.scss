@@ -10,6 +10,7 @@ li{
  }
  .logo{
     display: flex;
+    align-self: center;
  }
  .loginbtn {
     border: 1.5px solid #2F945C;
@@ -117,7 +118,6 @@ li{
   }
 //   908px
 /* Hamburger Menu Button */
-/* Hamburger Menu Button */
 .hamburger {
     display: none;
     background: none;
@@ -126,11 +126,19 @@ li{
     position: absolute;
     right: 20px;
     top: 20px;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
   }
   
   .hamburger-icon {
     width: 30px;
     height: 30px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Rotate the hamburger icon when menu is open */
+  .hamburger.open .hamburger-icon {
+    transform: rotate(180deg);
   }
   
   /* Mobile Menu */
@@ -149,20 +157,26 @@ li{
     .nav-links {
       display: none;
       position: absolute;
-      top: 60px;
-      left: 0;
+      top: 0;
+      left: -100%;
       width: 100%;
-      background: white;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.95);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       flex-direction: column;
       align-items: center;
-      padding: 20px 0;
+      padding-top: 80px;
+      transition: left 0.4s ease-in-out;
     }
   
     .nav-links.open {
       display: flex;
+      left: 0;
+      align-items: center;
+    
     }
   
+    /* Smooth fade-in animation for items */
     .lists,
     .searchicon,
     .btns {
@@ -170,6 +184,16 @@ li{
       gap: 20px;
       text-align: center;
       width: 100%;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+  
+    .nav-links.open .lists,
+    .nav-links.open .searchicon,
+    .nav-links.open .btns {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
