@@ -1,7 +1,10 @@
+import React from 'react';
+import First from "./components/first"
+
 function App() {
   return (
     <div>
-      <h1>Hello, React!</h1>
+      <First />
     </div>
   );
 }
