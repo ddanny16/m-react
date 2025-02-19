@@ -11,25 +11,34 @@ const First = () => {
   return (
     <main className="firstmain">
       <div className="firstwhole">
+    
         <div className="firstleft">
           <img className="phone" src={Phone} alt="phone" />
           <number>+234 7065292789</number>
         </div>
 
+       
         <div className="firstmiddle">
           <span className="middle">Get 50% Off on Selected Items</span>
-          <a href="/" className="middle2">
+          <span href="/" className="middle2">
             <b>|</b> Shop Now
-          </a>
+          </span>
         </div>
 
+     
         <div className="firstright">
+       
           <div className="dropdown">
-            <span 
-              className="language" 
+            <span
+              className="language"
               onClick={() => setLanguageOpen(!languageOpen)}
             >
-              EN <img className={`arrow ${languageOpen ? "rotate" : ""}`} src={Arrow} alt="arrow" />
+              EN{" "}
+              <img
+                className={`arrow ${languageOpen ? "rotate" : ""}`}
+                src={Arrow}
+                alt="arrow"
+              />
             </span>
             {languageOpen && (
               <ul className="dropdown-menu language-menu">
@@ -40,14 +49,18 @@ const First = () => {
             )}
           </div>
 
-          {/* Country Dropdown */}
+       
           <div className="dropdown">
-            <span 
-              className="country" 
+            <span
+              className="country"
               onClick={() => setCountryOpen(!countryOpen)}
             >
               <img className="flag" src={Flag} alt="flag" /> NIGERIA
-              <img className={`arrow ${countryOpen ? "rotate" : ""}`} src={Arrow} alt="arrow" />
+              <img
+                className={`arrow ${countryOpen ? "rotate" : ""}`}
+                src={Arrow}
+                alt="arrow"
+              />
             </span>
             {countryOpen && (
               <ul className="dropdown-menu country-menu">
