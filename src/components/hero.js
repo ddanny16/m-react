@@ -5,7 +5,7 @@ import LeftArrow from "../assets/chevron-right.svg";
 const Hero = () => {
   return (
     <div>
-      <main className="heromain">
+      <main className="heromain fade-in">
         <section className="heroimgtext">
           <span className="herotext"> ENDLESS SUMMER SALE</span>
           <div className="herotext2">
